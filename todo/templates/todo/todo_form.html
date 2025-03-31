@@ -23,6 +23,7 @@
         {% csrf_token %}
         {{ form|crispy }}
         <button type="submit" class="btn btn-primary">Salvar</button>
+        <a href="{% url 'todo_list' %}" class="btn btn-secondary">Cancelar</a>
     </form>
 
 {% endblock content %}
