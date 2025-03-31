@@ -17,25 +17,19 @@ class TodoListView(ListView):
 class TodoCreateView(CreateView):
     model = Todo
     fields = ["titulo", "descricao", "data_entrega"]
-    success_url = reverse_lazy(
-        "todo_list"
-    ) 
+    success_url = reverse_lazy("todo_list")
 
-    
+
 class TodoUpdateView(UpdateView):
     model = Todo
     fields = ["titulo", "descricao", "data_entrega"]
-    success_url = reverse_lazy(
-        "todo_list"
-    )  
-    
-    
+    success_url = reverse_lazy("todo_list")
+
+
 class TodoDeleteView(DeleteView):
     model = Todo
-    success_url = reverse_lazy(
-        "todo_list"
-    ) 
-    
+    success_url = reverse_lazy("todo_list")
+
 
 class TodoCompleteView(View):
     def get(self, request, pk):
